@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nuestra Boda — Seidy & Oscar</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Alex+Brush&family=Cinzel:wght@400;500;600;700&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,400&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        lila: {
+                            50: '#FAF5FF',
+                            100: '#F3E8FF',
+                            200: '#E9D5FF',
+                            300: '#D8B4FE',
+                            400: '#C084FC',
+                            500: '#A855F7',
+                            600: '#9333EA',
+                            700: '#7E22CE',
+                            800: '#581C87',
+                            900: '#3B0764',
+                        },
+                        gold: {
+                            100: '#FEF9C3',
+                            200: '#FEF08A',
+                            300: '#FDE047',
+                            400: '#EAB308',
+                            500: '#D4AF37',
+                            600: '#CA8A04',
+                        }
+                    },
+                    fontFamily: {
+                        script: ['"Alex Brush"', 'cursive'],
+                        cinzel: ['"Cinzel"', 'serif'],
+                        serif: ['"Cormorant Garamond"', 'serif'],
+                        sans: ['"Montserrat"', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        /* Magically lighter, luminous gradient flowing from royal plum into ethereal lavender */
+        body {
+            background: linear-gradient(180deg, 
+                #2D1642 0%, 
+                #41205F 25%, 
+                #5E3384 50%, 
+                #7E4B9E 75%, 
+                #9D63BC 100%
+            );
+            color: #ffffff;
+            min-height: 100vh;
+        }
+
+        /* Glassmorphism Cards with Luminous Crystal Reflection */
+        .glass-card-header {
+            background: rgba(45, 22, 66, 0.55);
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
+            border: 1px solid rgba(255, 255, 255, 0.22);
+            box-shadow: 0 12px 35px rgba(0, 0, 0, 0.25);
+        }
+
+        .glass-card-mid {
+            background: rgba(255, 255, 255, 0.16);
+            backdrop-filter: blur(18px);
+            -webkit-backdrop-filter: blur(18px);
+            border: 1px solid rgba(255, 255, 255, 0.35);
+            box-shadow: 0 12px 32px rgba(0, 0, 0, 0.15), 0 0 25px rgba(233, 213, 255, 0.25);
+        }
+
+        .glass-card-gold {
+            background: rgba(255, 255, 255, 0.18);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border: 1px solid rgba(253, 224, 71, 0.55);
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.18), 0 0 30px rgba(212, 175, 55, 0.25);
+        }
+
+        .text-glow {
+            text-shadow: 0 0 25px rgba(255, 255, 255, 0.9), 0 0 45px rgba(216, 180, 254, 0.7);
+        }
+
+        .text-gold-glow {
+            text-shadow: 0 0 15px rgba(253, 224, 71, 0.7);
+        }
+
+        /* Ambient glowing circles for magical depth */
+        .ambient-glow {
+            position: absolute;
+            border-radius: 50%;
+            filter: blur(90px);
+            pointer-events: none;
+            opacity: 0.55;
+        }
+    </style>
+</head>
+<body class="antialiased relative overflow-x-hidden selection:bg-lila-300 selection:text-lila-900">
+
+    <!-- Encabezado / Hero Section -->
+    <header class="relative min-h-screen flex items-center justify-center text-center p-6 bg-cover bg-center bg-fixed" style="background-image: linear-gradient(to bottom, rgba(45, 22, 66, 0.60), rgba(65, 32, 95, 0.85)), url('https://images.unsplash.com/photo-1519741497674-611481863552?auto=format&fit=crop&q=80');">
+        
+        <!-- Ambient Light Effect -->
+        <div class="ambient-glow w-96 h-96 bg-lila-400 top-20 left-1/2 -translate-x-1/2"></div>
+
+        <div class="max-w-3xl mx-auto space-y-6 relative z-10 py-20">
+            
+            <p class="font-cinzel text-gold-300 text-xs md:text-sm tracking-[0.5em] uppercase font-semibold text-gold-glow">NUESTRA BODA</p>
+            
+            <h1 class="font-script text-7xl md:text-9xl text-white text-glow my-4">Seidy & Oscar</h1>
+            
+            <p class="font-serif italic text-2xl md:text-3xl text-lila-100 font-light max-w-xl mx-auto leading-relaxed">
+                "Dios unió nuestros caminos y con Su bendición queremos compartir este día especial contigo."
+            </p>
+
+            <div class="flex items-center justify-center gap-4 my-8">
+                <div class="h-[1px] w-20 bg-gradient-to-r from-transparent to-gold-400"></div>
+                <i class="fas fa-cross text-gold-300 text-xs"></i>
+                <div class="h-[1px] w-20 bg-gradient-to-l from-transparent to-gold-400"></div>
+            </div>
+
+            <p class="font-cinzel text-2xl md:text-3xl font-semibold text-white tracking-widest uppercase">Sábado, 17 de Abril del 2027</p>
+            <p class="font-cinzel text-lg text-gold-300 font-medium tracking-[0.3em]">6:00 PM</p>
+
+            <!-- Contador Regresivo -->
+            <div class="pt-10">
+                <p class="font-cinzel text-[10px] uppercase tracking-[0.4em] text-lila-100 mb-6 font-semibold">Esperando el tiempo de Dios</p>
+                <div class="grid grid-cols-4 gap-3 md:gap-6 max-w-lg mx-auto">
+                    <div class="glass-card-header p-4 md:p-6 rounded-2xl">
+                        <span id="days" class="font-cinzel text-2xl md:text-4xl font-semibold text-white block">00</span>
+                        <span class="font-cinzel text-[9px] md:text-xs text-gold-300 uppercase tracking-widest font-semibold mt-2 block">Días</span>
+                    </div>
+                    <div class="glass-card-header p-4 md:p-6 rounded-2xl">
+                        <span id="hours" class="font-cinzel text-2xl md:text-4xl font-semibold text-white block">00</span>
+                        <span class="font-cinzel text-[9px] md:text-xs text-gold-300 uppercase tracking-widest font-semibold mt-2 block">Horas</span>
+                    </div>
+                    <div class="glass-card-header p-4 md:p-6 rounded-2xl">
+                        <span id="minutes" class="font-cinzel text-2xl md:text-4xl font-semibold text-white block">00</span>
+                        <span class="font-cinzel text-[9px] md:text-xs text-gold-300 uppercase tracking-widest font-semibold mt-2 block">Min</span>
+                    </div>
+                    <div class="glass-card-header p-4 md:p-6 rounded-2xl">
+                        <span id="seconds" class="font-cinzel text-2xl md:text-4xl font-semibold text-white block">00</span>
+                        <span class="font-cinzel text-[9px] md:text-xs text-gold-300 uppercase tracking-widest font-semibold mt-2 block">Seg</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Botón Principal -->
+            <div class="pt-10 flex items-center justify-center">
+                <a href="#rsvp" class="bg-gradient-to-r from-lila-600 via-purple-700 to-lila-600 hover:from-lila-500 hover:to-purple-600 text-white font-cinzel text-xs tracking-[0.25em] font-semibold px-10 py-4.5 rounded-full shadow-2xl transition-all transform hover:-translate-y-1 border border-gold-400/60 uppercase">
+                    Confirmar Asistencia
+                </a>
+            </div>
+
+        </div>
+    </header>
+
+    <!-- Versículo Inicial -->
+    <section class="py-20 px-6 relative bg-white/10 backdrop-blur-md border-y border-white/20">
+        <div class="max-w-3xl mx-auto text-center space-y-6">
+            <i class="fas fa-quote-left text-3xl text-gold-300/90"></i>
+            <blockquote class="font-serif text-2xl md:text-3xl text-white italic leading-relaxed font-light">
+                "Y si alguno prevaleciere contra uno, dos le resistirán; y cordón de tres dobleces no se rompe pronto."
+            </blockquote>
+            <p class="font-cinzel text-xs font-semibold text-gold-300 uppercase tracking-[0.3em]">— Eclesiastés 4:12</p>
+        </div>
+    </section>
+
+    <!-- Dónde & Cuándo -->
+    <section class="py-24 px-6 max-w-5xl mx-auto relative">
+        <div class="ambient-glow w-80 h-80 bg-lila-300 top-1/3 left-5"></div>
+
+        <div class="text-center mb-20 space-y-3 relative z-10">
+            <h2 class="font-script text-6xl md:text-7xl text-white text-glow">Dónde & Cuándo</h2>
+            <p class="font-cinzel text-gold-300 text-xs tracking-[0.4em] uppercase font-semibold">Los tiempos de Dios son perfectos</p>
+        </div>
+
+        <div class="grid md:grid-cols-2 gap-10 relative z-10">
+            <!-- Ceremonia -->
+            <div class="glass-card-gold p-10 rounded-3xl flex flex-col items-center text-center space-y-5 hover:border-gold-300 transition duration-500">
+                <div class="w-20 h-20 bg-white/20 rounded-full flex items-center justify-center text-gold-300 text-3xl border border-gold-400/60 shadow-lg">
+                    <i class="fas fa-church"></i>
+                </div>
+                <h3 class="font-cinzel text-2xl font-normal text-white tracking-wider">Ceremonia Eclesiástica</h3>
+                <div class="text-lila-50 font-light space-y-1">
+                    <p class="text-lg">Sábado, 17 de Abril de 2027</p>
+                    <p class="font-cinzel text-gold-300 text-sm tracking-widest font-semibold">6:00 PM</p>
+                </div>
+                <p class="text-white font-medium text-lg pt-2">Iglesia de Dios Linaje de David</p>
+                <p class="text-lila-100 text-sm font-light leading-relaxed">Acompáñanos a dar gracias a Dios y consagrar nuestro matrimonio en Su sagrada presencia.</p>
+            </div>
+
+            <!-- Recepción -->
+            <div class="glass-card-gold p-10 rounded-3xl flex flex-col items-center text-center space-y-5 hover:border-gold-300 transition duration-500">
+                <div class="w-20 h-20 bg-white/20 rounded-full flex items-center justify-center text-gold-300 text-3xl border border-gold-400/60 shadow-lg">
+                    <i class="fas fa-glass-cheers"></i>
+                </div>
+                <h3 class="font-cinzel text-2xl font-normal text-white tracking-wider">Recepción</h3>
+                <div class="text-lila-50 font-light space-y-1">
+                    <p class="text-lg">Sábado, 17 de Abril de 2027</p>
+                    <p class="font-cinzel text-gold-300 text-xs tracking-widest font-semibold uppercase">A continuación de la ceremonia</p>
+                </div>
+                <p class="text-white font-medium text-lg pt-2">Colonia Villa Ernestina</p>
+                <p class="text-lila-100 text-sm font-light leading-relaxed">Celebremos juntos este nuevo comienzo en la gracia de Dios con alegría, banquete y momentos inolvidables.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Información Adicional -->
+    <section class="py-20 px-6 max-w-4xl mx-auto grid md:grid-cols-2 gap-8 relative">
+        <div class="ambient-glow w-80 h-80 bg-lila-200 right-0 top-10"></div>
+
+        <!-- Código de Vestimenta -->
+        <div class="glass-card-mid p-8 rounded-3xl text-center space-y-4 relative z-10">
+            <div class="w-14 h-14 bg-white/20 text-gold-300 rounded-full flex items-center justify-center mx-auto text-2xl border border-white/40 shadow-md">
+                <i class="fas fa-user-tie"></i>
+            </div>
+            <h3 class="font-cinzel text-xl font-normal text-white tracking-wider">Código de Vestimenta</h3>
+            <p class="font-cinzel text-gold-300 text-[11px] tracking-[0.2em] uppercase font-semibold">Elegante y Modesta</p>
+            <p class="text-lila-50 text-sm leading-relaxed font-light">
+                Les agradecemos vestir con elegancia y modestia para honrar a Dios y compartir la alegría de este día tan especial.
+            </p>
+        </div>
+
+        <!-- Regalos -->
+        <div class="glass-card-mid p-8 rounded-3xl text-center space-y-4 relative z-10">
+            <div class="w-14 h-14 bg-white/20 text-gold-300 rounded-full flex items-center justify-center mx-auto text-2xl border border-white/40 shadow-md">
+                <i class="fas fa-envelope-open-text"></i>
+            </div>
+            <h3 class="font-cinzel text-xl font-normal text-white tracking-wider">Muestra de Cariño</h3>
+            <p class="font-cinzel text-gold-300 text-[11px] tracking-[0.2em] uppercase font-semibold">Lluvia de Sobres</p>
+            <p class="text-lila-50 text-sm leading-relaxed font-light">
+                Su presencia es nuestra mayor bendición de parte de Dios. Si desean hacernos un presente, les agradeceríamos que sea en efectivo.
+            </p>
+        </div>
+    </section>
+
+    <!-- RSVP / Confirmación -->
+    <section id="rsvp" class="py-24 px-6 relative bg-gradient-to-b from-transparent via-lila-400/20 to-lila-300/30">
+        <div class="ambient-glow w-96 h-96 bg-lila-200 bottom-10 left-1/2 -translate-x-1/2"></div>
+
+        <div class="max-w-xl mx-auto relative z-10">
+            <div class="text-center space-y-3 mb-12">
+                <h2 class="font-script text-6xl text-white text-glow">Confirmar Asistencia</h2>
+                <p class="font-cinzel text-gold-300 text-xs tracking-[0.3em] uppercase font-semibold">Por favor confirma antes del 1 de Abril, 2027</p>
+            </div>
+
+            <form id="rsvpForm" onsubmit="sendToWhatsApp(event)" class="glass-card-gold p-8 md:p-10 rounded-3xl space-y-6">
+                <div>
+                    <label class="block font-cinzel text-[11px] uppercase tracking-widest text-white mb-3 font-semibold" for="fullName">Nombre Completo *</label>
+                    <input type="text" id="fullName" required placeholder="Ej. Ana García" class="w-full px-5 py-3.5 rounded-xl border border-white/40 focus:border-gold-300 outline-none bg-black/20 text-white placeholder-lila-100/70 font-light text-sm shadow-inner transition">
+                </div>
+
+                <div>
+                    <label class="block font-cinzel text-[11px] uppercase tracking-widest text-white mb-3 font-semibold">¿Asistirás a la Boda? *</label>
+                    <div class="grid grid-cols-2 gap-4">
+                        <label class="flex items-center justify-center p-3.5 border border-white/40 rounded-xl cursor-pointer hover:border-gold-300 bg-black/15 transition">
+                            <input type="radio" name="attendance" value="Sí, asistiré con gusto" required class="accent-gold-400">
+                            <span class="ml-2 text-sm text-white font-light">Sí, asistiré</span>
+                        </label>
+                        <label class="flex items-center justify-center p-3.5 border border-white/40 rounded-xl cursor-pointer hover:border-gold-300 bg-black/15 transition">
+                            <input type="radio" name="attendance" value="Lo siento, no podré asistir" required class="accent-gold-400">
+                            <span class="ml-2 text-sm text-white font-light">No podré ir</span>
+                        </label>
+                    </div>
+                </div>
+
+                <div>
+                    <label class="block font-cinzel text-[11px] uppercase tracking-widest text-white mb-3 font-semibold" for="message">Mensaje de Bendición para Seidy y Oscar</label>
+                    <textarea id="message" rows="3" placeholder="Déjanos unas palabras de bendición..." class="w-full px-5 py-3.5 rounded-xl border border-white/40 focus:border-gold-300 outline-none bg-black/20 text-white placeholder-lila-100/70 font-light text-sm shadow-inner transition"></textarea>
+                </div>
+
+                <button type="submit" class="w-full bg-gradient-to-r from-emerald-600 via-teal-600 to-emerald-600 hover:from-emerald-500 hover:to-teal-500 text-white font-cinzel text-xs tracking-[0.2em] font-semibold py-4 px-6 rounded-xl shadow-2xl transition-all transform hover:scale-[1.01] flex items-center justify-center gap-3 uppercase border border-emerald-300/50">
+                    <i class="fab fa-whatsapp text-xl"></i>
+                    <span>Enviar por WhatsApp</span>
+                </button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Versículo Final -->
+    <section class="py-20 px-6 bg-white/10 backdrop-blur-md border-t border-white/20">
+        <div class="max-w-3xl mx-auto text-center space-y-6">
+            <i class="fas fa-heart text-2xl text-gold-300"></i>
+            <blockquote class="font-serif text-2xl md:text-3xl text-white italic leading-relaxed font-light">
+                "Así que no son ya más dos, sino una sola carne; por tanto, lo que Dios juntó, no lo separe el hombre."
+            </blockquote>
+            <p class="font-cinzel text-xs font-semibold text-gold-300 uppercase tracking-[0.3em]">— Mateo 19:6</p>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-16 bg-gradient-to-b from-[#7e4b9e] to-[#60357d] text-center space-y-4 border-t border-gold-400/40">
+        <p class="font-script text-5xl text-white text-glow">Seidy & Oscar</p>
+        <p class="font-cinzel text-xs tracking-[0.4em] uppercase text-gold-300">17 . 04 . 2027</p>
+        <p class="text-xs text-lila-50/90 pt-4 font-light">Con la bendición de Dios y el amor de nuestras familias.</p>
+    </footer>
+
+    <!-- Script Lógica -->
+    <script>
+        // Countdown Timer Logic
+        const weddingDate = new Date("April 17, 2027 18:00:00").getTime();
+
+        function updateCountdown() {
+            const now = new Date().getTime();
+            const distance = weddingDate - now;
+
+            if (distance < 0) {
+                document.getElementById("days").innerText = "00";
+                document.getElementById("hours").innerText = "00";
+                document.getElementById("minutes").innerText = "00";
+                document.getElementById("seconds").innerText = "00";
+                return;
+            }
+
+            const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+            const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+            const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+            document.getElementById("days").innerText = days < 10 ? "0" + days : days;
+            document.getElementById("hours").innerText = hours < 10 ? "0" + hours : hours;
+            document.getElementById("minutes").innerText = minutes < 10 ? "0" + minutes : minutes;
+            document.getElementById("seconds").innerText = seconds < 10 ? "0" + seconds : seconds;
+        }
+
+        setInterval(updateCountdown, 1000);
+        updateCountdown();
+
+        // WhatsApp RSVP Submission
+        function sendToWhatsApp(event) {
+            event.preventDefault();
+
+            const phoneNumber = "50433993817"; 
+
+            const name = document.getElementById("fullName").value;
+            const attendanceRadios = document.getElementsByName("attendance");
+            let attendance = "";
+            for (const radio of attendanceRadios) {
+                if (radio.checked) {
+                    attendance = radio.value;
+                    break;
+                }
+            }
+            const message = document.getElementById("message").value;
+
+            let text = `¡Hola Seidy y Oscar! 💒✨\n\n`;
+            text += `Confirmación de Asistencia a su Boda:\n`;
+            text += `👤 *Nombre:* ${name}\n`;
+            text += `📌 *Asistencia:* ${attendance}\n`;
+            if (message.trim() !== "") {
+                text += `💌 *Mensaje de Bendición:* "${message}"\n`;
+            }
+
+            const encodedText = encodeURIComponent(text);
+            const whatsappUrl = `https://api.whatsapp.com/send?phone=${phoneNumber}&text=${encodedText}`;
+
+            window.open(whatsappUrl, "_blank");
+        }
+    </script>
+</body>
+</html>
